@@ -1,0 +1,1181 @@
+/*
+Theme Name: twentyseventeen-child
+Template: twentyseventeen
+Theme URI: https://wordpress.org/themes/twentyseventeen/
+Author: the WordPress team
+Author URI: https://wordpress.org/
+Description: Twenty Seventeen brings your site to life with header video and immersive featured images. With a focus on business sites, it features multiple sections on the front page as well as widgets, navigation and social menus, a logo, and more. Personalize its asymmetrical grid with a custom color scheme and showcase your multimedia content with post formats. Our default theme for 2017 works great in many languages, for any abilities, and on any device.
+Version: 1.3
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: twentyseventeen
+Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+
+/*------- Structure des pages -------*/
+
+.wrap {
+	max-width: 1200px;
+}
+
+body.page-two-column:not(.archive) #primary .entry-header {
+	float:none;
+	width:100%;
+	text-align:center;
+}
+
+.site-content-contain #content {
+	padding-top: 3em;
+}
+
+/*-------------- Texte -------------*/
+
+@font-face{
+	font-family:'Lucian Schoenschrift CAT-webfont';
+	src: url('font/Lucian Schoenschrift CAT-webfont/Lucian Schoenschrift CAT-webfont.woff');
+	src: url('font/Lucian Schoenschrift CAT-webfont/Lucian Schoenschrift CAT-webfont.ttf'),
+		 url('font/Lucian Schoenschrift CAT-webfont/Lucian Schoenschrift CAT-webfont.eot'),
+		 url('font/Lucian Schoenschrift CAT-webfont/Lucian Schoenschrift CAT-webfont.svg');
+}
+
+@font-face{
+	font-family:'GriffosFont-webfont';
+	src: url('font/GriffosFont-webfont/GriffosFont-webfont.woff');
+	src: url('font/GriffosFont-webfont/GriffosFont-webfont.ttf'),
+		 url('font/GriffosFont-webfont/GriffosFont-webfont.eot'),
+		 url('font/GriffosFont-webfont/GriffosFont-webfont.svg');
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+ {
+	font-family: 'Lucian Schoenschrift CAT-webfont', serif;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color:#767676;
+}
+
+/*h1*/
+.page-title,
+body.page:not(.twentyseventeen-front-page) .entry-title {
+	text-transform:none;
+	font-size:3rem;
+}
+
+/*h1*/
+.single-post .entry-title,
+.event-template-default h1 {
+	font-size:3rem;
+}
+
+#texte-excerpt-page-actualite h2,
+#a-propos h2,
+h2.site-description {
+	font-size: 2.5rem;
+	color: #767676;
+}
+
+.entry-content-front-page h2,
+.lien-contact h2,
+#post-2 h2,
+#actualite-front-page h2 {
+	padding-top: 0.5em;
+	padding-bottom:0.4em;
+	text-align:center;
+	background: #000;
+	color:#FFF;
+	text-transform: uppercase;
+	font-family: 'GriffosFont-webfont', serif;
+	line-height: 1;
+}
+
+/*h3*/
+#reply-title,
+#post-2 .csColumn h3,
+h3#reservation {
+	font-size: 2rem;
+}
+
+/*Lettrine*/
+p:first-of-type:first-letter {
+  float:left;
+  font-size: 2em;
+  padding: 0.05em 0.05em 0 0;
+}
+
+.site-info p:first-of-type:first-letter,
+#commentform p:first-of-type:first-letter,
+.description-resume p:first-of-type:first-letter,
+.event-template-default .entry-content p:first-of-type:first-letter,
+.wpcf7-form p:first-of-type:first-letter {
+	float:none;
+	font-size:1.3rem;
+	padding:0;
+}
+
+p {
+	text-align: justify;
+}
+
+body {
+	font-family: 'GriffosFont-webfont', serif;
+	font-size:1.3rem;
+}
+
+#post-2 .csColumn p {
+	font-size: 1.1rem;
+	line-height: 1.2;
+}
+
+
+
+/*-------------- Liens -------------*/
+
+
+ .navigation-top a,
+ .site-header .navigation-top .menu-scroll-down,
+.site-info a,
+body.has-header-image .site-title a,
+#header-actualite-front .entry-title,
+.entry-title a,
+.entry-meta a,
+.nav-title,
+a {
+	text-decoration: none; 
+	color: #ba9e66;
+}
+
+.navigation-top .current-menu-item > a, .navigation-top .current_page_item > a {
+	color:#FFF;
+}
+
+
+.navigation-top a:hover, 
+.site-info p a:hover,
+#header-actualite-front .entry-title:hover,
+.entry-title a:hover,
+.entry-meta a:hover,
+#signature a:hover,
+a:hover {
+	color:#767676;
+}
+
+#content a,
+#content a:hover,
+.entry-footer a,
+.site-info a,
+.widget a,
+.widget .widget-title a,
+.widget ul li a,
+.site-footer .widget-area ul li a,
+.site-footer .widget-area ul li a,
+.menu-interieur li a,
+#post-2 .csColumn a,
+.widget a:hover,
+.widget ul li a:hover,
+.menu-interieur li a:hover,
+#post-2 .csColumn a:hover {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	text-decoration: none;
+}
+
+
+/*-------------- Boutons -------------*/
+input[type="submit"],
+input[type="button"] {
+	font-family:'GriffosFont-webfont', serif;
+	font-size:0.85rem;
+	color:#ba9e66;
+	background:#000;
+	text-transform: uppercase;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover {
+	color:#FFF;
+	background: #ba9e66;
+}
+
+
+/* --------------------------------------------------------------------------------
+									HEADER
+-----------------------------------------------------------------------------------*/
+
+
+.has-header-image.twentyseventeen-front-page .custom-header{
+	height:100%;
+	background: #FFF;
+}	
+
+/*Titre front-page*/
+.site-title {
+	text-transform: none;
+	font-size:7rem;
+	text-shadow:3px 3px 6px #000;
+}
+
+.twentyseventeen-front-page .site-branding-accueil .wrap {
+	text-align:center;
+	height: 100%;
+}
+
+.site-branding-accueil {
+	width: 100%;
+	position:absolute;
+	z-index: 3;
+}
+
+.site-branding-accueil-text {
+	width: 100%;
+	text-align: center;
+	margin-top: 25vh;
+}
+
+.site-branding-accueil-text a:hover {
+	opacity: 0.7;
+}
+
+body.has-header-image .site-description {
+	max-width: 650px;
+	color :#767676;
+	text-align:center;
+	background-color: rgba(255, 255, 255, 0.7);
+	margin:auto;
+	padding-top:15px;
+	padding-bottom:15px;
+	padding-right: 5px;
+	padding-left: 5px;
+	font-weight: bold;
+}
+
+/* Diaporama */
+.custom-header-diaporama {
+	width:100%;
+	overflow: hidden;
+	max-height:660px;
+	height: 100vh;
+}
+
+/*Titre pages*/
+#site-title-pages {
+	font-size: 4rem;
+}
+
+#masthead .wrap {
+	max-width:1000px;
+}
+
+/*Navigation et menu supérieur*/
+
+.navigation-top {
+	background: #000;
+	border-top: 1px solid #FFF;
+	border-bottom: 1px solid #FFF;
+
+}
+
+#menu-menu-superieur-container {
+	max-width: 700px;
+}
+
+.navigation-top {
+	font-size:0.85rem;
+}
+
+.navigation-top a {
+	text-transform: uppercase;
+}
+
+
+
+/* --------------------------------------------------------------------------------
+									FOOTER
+-----------------------------------------------------------------------------------*/
+
+.site-footer {
+	background: #000;
+	color:#FFF;
+}
+
+.site-info,
+#administration {
+	width:100%;
+	font-size:1.2rem;
+}
+
+
+.site-info p {
+	text-align:center;
+	margin:0;
+}
+
+
+.site-footer .wrap {
+    padding-bottom: 0.9em;
+    padding-top: 1.4em;
+    max-width:1200px;
+}
+
+#administration {
+	text-align: right;
+	margin-bottom: 10px;
+}
+
+
+/* --------------------------------------------------------------------------------
+									FRONT PAGE 
+-----------------------------------------------------------------------------------*/
+
+
+/*--------------- Première partie -------------------------*/
+
+.panel-content .wrap {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1300px;
+	padding-top: 1.5em;
+	padding-bottom: 1.5em;
+	justify-content: space-between;
+}
+
+body.page-two-column:not(.archive) #primary .entry-content-front-page {
+	width:68%;
+}
+
+#titre-infos-accueil {
+	margin-top: 0;
+}
+
+.entry-content-front-page h2 {
+	margin-top: 2em;
+	margin-bottom:1em;
+}
+
+#content-accueil p {
+	padding-left: 2em;
+}
+
+#images-accueil {
+	display: flex;
+	justify-content: space-around;
+}
+
+/*Zone dernière actualité*/
+
+#actualite-front-page {
+	width:25%;
+	padding:10px;
+	border: 10px solid #000;
+	background:#f1efea;
+	box-shadow: 2px 2px 4px #CECECE;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	margin-left:7%;
+}
+
+#actualite-front-page h2 {
+	font-size:1.1rem;
+}
+
+#actualite-front {
+	border-top : 1px solid #ddd;
+	border-bottom:1px solid #ddd;
+}
+
+
+#header-actualite-front .entry-title {
+	text-transform: none;
+	font-size:1.6rem;
+	line-height: 1.1;
+	margin-bottom:0.25em;
+}
+
+#header-actualite-front .entry-meta {
+	text-transform: none;
+	font-size:1.2rem;
+	padding-top:0;
+	margin-bottom:0;
+	color:#333;
+	font-weight: 600;
+}
+
+.twentyseventeen-front-page article:not(.has-post-thumbnail):not(:first-child) {
+    border-top: none;
+}
+
+#resume-front-page .post-thumbnail {
+	margin-bottom:0;
+}
+
+#resume-front-page .entry-summary p {
+	line-height: 1.1;
+	margin-bottom:10px;
+}
+
+#resume-front-page .bouton-lire p {
+	margin-bottom:0;
+}
+
+#actualite-front #signature {
+	margin-top:15px;
+	font-size:1.15rem;
+	margin-bottom:0;
+}
+
+#actualite-front #signature a {
+	line-height: 1;
+}
+
+/*Bouton voir la suite des actualités*/
+#actualite-suite p {
+	margin-bottom:0;
+	margin-top:10px;
+	text-align: center;
+}
+
+#bouton-actualite-suite {
+	padding-right:14px;
+	padding-left:14px;
+}
+
+
+/* ---------------- Seconde partie -------------------------*/
+
+.home .entry-header {
+	display:none;
+}
+
+
+body.page-two-column:not(.archive) #primary .entry-content {
+	width:100%;
+}
+
+/*Zone contact*/
+.lien-contact {
+	max-width:330px;
+	margin:auto;
+	background:#000;
+}
+
+.lien-contact p {
+	margin-top:40px;
+	padding-top:60px;
+	padding-bottom:80px;
+	margin-bottom: 0;
+	background: #f1efea;
+}
+
+.lien-contact p:hover {
+	background: #ba9e66;
+}
+
+#arobase a {
+	font-size: 130px;
+	line-height: 0;
+	color: #ba9e66;
+	display : block; 
+    text-decoration : none;
+    font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
+}
+
+.lien-contact:hover #arobase a {  
+	color:#FFF;
+}
+
+/*Zone playlist youtube*/
+
+#playlist-youtube {
+	margin-top:100px;
+}
+
+
+/* --------------------------------------------------------------------------------
+								PAGE ACTUALITES
+-----------------------------------------------------------------------------------*/
+
+body:not(.has-sidebar):not(.page-one-column) .page-header {
+	float:none;
+	width:100%;
+	text-align:center;
+}
+
+.blog .wrap {
+	max-width: 1000px;
+}
+
+.blog:not(.has-sidebar) #primary article {
+	float: none;
+	margin-bottom:20px;
+	max-width: 900px;
+}
+/*----- zone de texte -------------*/
+#texte-excerpt-page-actualite {
+	background:#f1efea;
+	padding:5px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+/*-------- Image thumbnail ------------*/
+#thumbnail-page-actualite {
+	background:#f1efea;
+}
+
+#thumbnail-page-actualite .post-thumbnail {
+	margin-bottom: 0;
+}
+
+/*-------------- Titre et date ---------------------*/
+.blog:not(.has-sidebar) #primary article .entry-header {
+	text-align : center;
+}
+
+/*------- Dernière actualité ------------*/
+.blog:not(.has-sidebar) #primary #derniere-actualite article {
+	width:100%;
+}
+
+/*------- Suite des actualités -------------*/
+.blog:not(.has-sidebar) #primary #suite-actualite article {
+	width:47%;
+}
+
+#suite-actualite {
+	display:flex;
+	flex-wrap:wrap;
+	justify-content: space-around;
+}
+
+
+/*----------------- Bouton ------------*/
+.bouton-lire, 
+#lire-article {
+	width:100px;
+}
+
+#lire-article {
+	color:#ba9e66;
+	background: #000;
+}
+
+#lire-article:hover {
+	background: #ba9e66;
+	color: #FFF;
+}
+
+/*------------------ Signature --------------------*/
+#derniere-actualite #signature,
+#suite-actualite #signature {
+	margin-top:20px;
+}
+
+
+/* --------------------------------------------------------------------------------
+								ARTICLES (actualités) 
+-----------------------------------------------------------------------------------*/
+
+.single-post:not(.has-sidebar) #primary {
+	max-width: 900px;
+}
+
+.single-post .entry-header {
+	text-align: center;
+}
+
+#signature {
+	text-align: center;
+	margin-top:50px;
+}
+
+
+/* --------------------------------------------------------------------------------
+								PAGE PLUS D'INFOS 
+-----------------------------------------------------------------------------------*/
+
+/* ---------------- Menu intérieur -------------------------*/
+
+.menu-interieur {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	min-height:500px;
+}
+
+.menu-interieur li {
+	list-style: none;
+	margin-bottom:10px;
+}
+
+.patrimoine,
+.spectacle,
+.musees,
+.festivals,
+.bibliotheques,
+.cinemas {
+	width:300px;
+	height:200px;
+	padding-top:95px;
+	text-align:center;
+}
+
+.patrimoine {
+	background-image:url(http://oc-projet1.carolinehugues.ovh/wp-content/uploads/2017/10/Chateau-de-Versailles-300x200.jpg);
+}
+
+.spectacle {
+	background-image:url(http://oc-projet1.carolinehugues.ovh/wp-content/uploads/2017/11/Théâtre-Montanssier-300x200.jpg);
+}
+
+.musees {
+	background-image:url(http://oc-projet1.carolinehugues.ovh/wp-content/uploads/2017/11/©-Ville-de-Versailles-Musée-Lambinet-300x200.jpg);
+}
+
+.festivals {
+	background-image:url(http://oc-projet1.carolinehugues.ovh/wp-content/uploads/2017/11/Mois-Molière-300x200.jpg);
+}
+
+.bibliotheques {
+	background-image:url(http://oc-projet1.carolinehugues.ovh/wp-content/uploads/2017/11/©-Ville-de-Versailles-Bibliothèque-de-Versailles-300x200.jpg);
+}
+
+.cinemas {
+	background-image:url(http://oc-projet1.carolinehugues.ovh/wp-content/uploads/2017/11/©-UGC-Cinéma-cyrano-Versailles-300x200-.jpg);
+}
+
+
+
+.patrimoine a,
+.spectacle a,
+.musees a,
+.festivals a,
+.bibliotheques a,
+.cinemas a {
+	border: 1px solid #FFF;
+	padding : 20px;
+	color: #FFF;
+}
+
+/*Afin de créer des boutons de 185px de largeur en ajustant les marges intérieurs à la longueur du texte*/
+.patrimoine a {
+	padding-right :30.25px;
+	padding-left:30.25px;
+}
+.spectacle a {
+	padding-right :9.7085px;
+	padding-left:9.7085px;
+}
+.musees a {
+	padding-right :42.1165px;
+	padding-left:42.1165px;
+}
+.festivals a {
+	padding-right :38.8px;
+	padding-left:38.8px;
+}
+.bibliotheques a {
+	padding-right :20.05px;
+	padding-left:20.05px;
+}
+.cinemas a {
+	padding-right :38.875px;
+	padding-left:38.875px;
+}
+
+.patrimoine a:hover,
+.spectacle a:hover,
+.musees a:hover,
+.festivals a:hover,
+.bibliotheques a:hover,
+.cinemas a:hover  {
+	color:#767676;
+	background: #FFF;
+}
+
+
+/* ---------------- Contenu -------------------------*/
+
+#post-2 h2 {
+	margin-top : 40px;
+}
+
+#post-2 .csColumn {
+	background: #f1efea;
+}
+
+#post-2 .csColumn h3 {
+	background: #FFF;
+	margin-bottom:0;
+	padding-bottom:0.75em;
+	padding-top:20px;
+	color:#333;
+}
+
+#post-2 .csColumn p {
+	padding-right:10px;
+	margin-bottom:0;
+}
+
+
+
+/* --------------------------------------------------------------------------------
+								PAGE ACTIVITES DU MOIS
+-----------------------------------------------------------------------------------*/
+
+.page-id-242 thead tr {
+	background: #000;
+	color:#FFF;
+}
+
+.page-id-242 th.event-time {
+	padding-left: 5px;
+}
+
+/*Boutons s'inscrire*/
+#inscription, #em-booking-submit {
+	color:#ba9e66;
+	background: #000;
+}
+
+#inscription:hover, #em-booking-submit:hover {
+	background: #ba9e66;
+	color: #FFF;
+}
+
+.page-id-242 .bouton-inscription {
+	padding-top:10px;
+}
+
+
+.page-id-242 tbody tr:hover {
+	background: #f1efea;
+}
+
+.page-id-242 tbody tr td p {
+	margin-right: 10px;
+	margin-left:10px;
+}
+
+/*------------------------------------------------------ Page de l'activité ------------------------------------------------*/
+/*Largeur espace des labels "Commentaire" et "Nom d'utilisateur"*/
+.em-booking-form label,
+.em-booking-login-form p label {
+	width:110px;
+}
+
+.event-template-default h1 {
+	text-align:center;
+}
+
+.event-template-default .entry-content {
+	max-width: 900px;
+}
+
+.date-evenement, .adresse-evenement {
+	text-align:center;
+}
+
+.date-evenement {
+	margin-top: 20px;
+}
+
+.adresse-evenement {
+	margin-bottom:20px;
+}
+
+.em-booking {
+	display:flex;
+	flex-wrap:wrap;
+	justify-content: space-between;
+}
+
+div.em-booking-login {
+	margin-left:0;
+}
+
+/* --------------------------------------------------------------------------------
+								PAGE CONTACT
+-----------------------------------------------------------------------------------*/
+
+body.page-template.page-template-page-contact .wrap {
+	max-width: 1300px;
+}
+
+.post-13 .entry-content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+/*---------------------- Le formulaire -------------------------*/
+#wpcf7-f224-p13-o1 {
+	width:50%;
+	min-width:200px;
+}
+
+/*---------------------- Zone à propos ---------------------------*/
+#a-propos {
+	width:25%;
+	min-width:300px;
+	height:100%;
+	margin-top:20px;
+	padding:10px;
+	border: 10px solid #000;
+	background:#f1efea;
+	box-shadow: 2px 2px 4px #CECECE;
+	text-align: center;
+}
+
+#a-propos p {
+	padding: 10px;
+}
+
+
+
+
+
+/* -----------------------------------------------------------------------------------------------------------------------------------------------------
+																			RESPONSIVE
+------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+@media screen and (max-width: 80em) {
+/*-------------------------- Page accueil ----------------------------*/
+
+/*Zone dernière actialité*/
+#actualite-front-page {
+	width:29%;
+	margin-left:3%;
+}	
+}
+
+@media screen and (max-width: 70em) {
+/*-------------------------- Header ----------------------------*/
+.site-branding-accueil-text {
+	margin-top: 20vh;
+}
+
+/*-------------------------- Page accueil ----------------------------*/
+/*Passer les zones Plus d'infos, Activités du mois et Dernière acualité en pleine largeur*/
+body.page-two-column:not(.archive) #primary .entry-content-front-page {
+	width: 100%;
+}
+
+/*Zone dernière actialité*/
+#actualite-front-page {
+	margin:auto;
+	width:95%;
+}	
+
+}
+
+@media screen and (max-width: 60em) {
+/*-------------------------- Header ----------------------------*/
+
+.site-title {
+	font-size:5rem;
+}
+
+body.has-header-image .site-description {
+	font-size: 2rem;
+	max-width: 450px;
+}
+
+button.menu-toggle {
+	color: #ba9e66;
+}
+
+
+
+
+}
+
+
+@media screen and (min-width: 40em) and (max-width: 70em) {
+/*-------------------------- Header ----------------------------*/
+li.search-top-menu {
+	width:100%;
+}
+
+.search-form {
+	width:250px;
+	margin:auto;
+}
+
+/*-------------------------- Page Accueil ----------------------------*/
+
+/*Zone dernière actialité*/
+#resume-front-page {
+	display:flex;
+	justify-content: space-between;
+}
+
+#resume-front-page .post-thumbnail,
+.resume-front-page {
+	width:47%;
+}
+
+.resume-front-page {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+}
+
+
+@media screen and (max-width: 48em) {
+/*-------------------------- Header ----------------------------*/
+/*Afin qu'il n'y ait pas d'espace entre le diaporama et le menu lorsque le menu passe en version mobile*/
+.custom-header-diaporama {
+	height: 100%;
+}
+
+
+ul#top-menu.menu {
+	background: #000;
+}
+
+.site-branding-accueil-text {
+	margin-top: 10vh;
+}
+
+.navigation-top {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+}
+
+.custom-header {
+	padding-top : 40px;
+}
+
+.home #content.site-content {
+	padding-top:0;
+}
+
+/*-------------------------- Page Accueil ----------------------------*/
+/*Zone plus d'infos*/
+#images-accueil {
+	display:none;
+}
+
+/*-------------------------- Page contact ----------------------------*/
+#wpcf7-f224-p13-o1 {
+	width:80%;
+	margin:auto;
+}
+
+#a-propos {
+	width:90%;
+	margin:auto;
+}
+
+}
+
+
+@media screen and (max-width: 40em) {
+/*-------------------------- Header ----------------------------*/
+body.has-header-image .site-description {
+	display: none;
+}
+
+.site-branding-accueil-text {
+	margin-top: 15vh;
+}
+
+.site-title,
+#site-title-pages  {
+	font-size:3.5rem;
+}
+
+/*-------------------------- Page Actualités ----------------------------*/
+.blog:not(.has-sidebar) #primary #suite-actualite article {
+	width:100%;
+}
+
+/*-------------------------- Page Plus d'infos ----------------------------*/
+.csColumn p img {
+	float:none;
+	margin-left:25%;
+}
+
+/*-------------------------- Page Ativités du mois ----------------------------*/
+.page-id-242 thead tr, .page-id-242 tbody tr {
+	display:flex;
+	flex-wrap:wrap;
+	justify-content: space-between;
+}
+
+.page-id-242 tbody tr td,
+.css-events-list table.events-table th.event-time,
+.css-events-list table.events-table th.event-activite,
+.css-events-list table.events-table th.event-description,
+.css-events-list table.events-table th.event-inscription {
+	width:50%;
+}
+
+
+}
+
+
+
+@media screen and (max-width: 30em) {
+/*-------------------------- Header ----------------------------*/	
+.site-title,
+#site-title-pages  {
+	font-size:3rem;
+}
+
+.site-branding-accueil-text {
+	margin-top: 10vh;
+}
+
+/*-------------------------- Page Accueil ----------------------------*/
+.panel-content .wrap {
+	padding-right:1em;
+	padding-left:1em;
+}
+
+/*Zone dernière actialité*/
+#bouton-actualite-suite {
+	padding-right:5px;
+	padding-left:5px;
+}
+
+/*-------------------------- Page Plus d'infos ----------------------------*/
+.csColumn p img {
+	margin-left:15%;
+}
+
+/*-------------------------- Page Contact ----------------------------*/
+/*Formulaire*/
+#wpcf7-f224-p13-o1 {
+	width:100%;
+}
+
+/*Zone à propos*/
+#a-propos {
+	width:90%;
+	margin: auto;
+}
+
+/*-------------------------- Page activité seule ----------------------------*/
+body.event-template-default .wrap {
+	padding-right:1em;
+	padding-left:1em;
+}
+
+.em-booking-form-details {
+	width:250px;
+}
+
+
+}
+
+
+@media screen and (max-width: 25em) {
+
+/*-------------------------- Page Accueil ----------------------------*/
+.panel-content .wrap {
+	padding-right: 0.7em;
+	padding-left: 0.7em;
+}
+
+.site-branding-accueil-text {
+	margin-top: 5vh;
+}
+
+/*Zones plus d'infos et activités du mois*/
+#content-accueil p {
+	padding-left: 0;
+}
+
+/*-------------------------- Page Plus d'infos ----------------------------*/	
+.csColumn p img {
+	margin-left:5%;
+}
+
+
+/*-------------------------- Page Activités du mois ----------------------------*/
+.page-id-242 tbody tr td.description-resume,
+.page-id-242 tbody tr td.bouton-sinscrire {
+	width:100%;
+}
+
+.page-id-242 tbody tr td.description-resume p {
+	margin-top: 1.5em;
+	margin-right:0;
+	margin-left:0;
+}
+
+.css-events-list table.events-table th.event-description,
+.css-events-list table.events-table th.event-inscription {
+	width:100%;
+	text-align:center;
+}
+
+.page-id-242 p.bouton-inscription {
+	width:120px;
+	margin-right:auto;
+	margin-left:auto;
+	padding-top:0;
+}
+
+.css-events-list table.events-table th.event-time,
+.css-events-list table.events-table th.event-activite,
+.css-events-list table.events-table th.event-description,
+.css-events-list table.events-table th.event-inscription {
+	padding-bottom:0.2em;
+	padding-top:0.2em;
+}
+
+}
+
+@media screen and (max-width: 20em) {
+/*-------------------------- Header ----------------------------*/	
+
+.site-title,
+#site-title-pages  {
+	font-size:2.5rem;
+}
+
+/*-------------------------- Page Plus d'infos ----------------------------*/	
+.csColumn p img {
+	margin-left:3%;
+}
+
+/*-------------------------- Page activité seule ----------------------------*/
+body.event-template-default .wrap {
+	padding-right:0.3em;
+	padding-left:0.3em;
+}
+
+.em-booking-form-details {
+	width:250px;
+}
+
+/*-------------------------- Page Contact ----------------------------*/
+
+body.page-template.page-template-page-contact .wrap {
+	padding-right:0.3em;
+	padding-left:0.3em;
+}
+
+}
